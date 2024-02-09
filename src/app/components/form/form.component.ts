@@ -40,9 +40,7 @@ export class FormComponent {
         title: this.validateForm.value.title,
         body: this.validateForm.value.body
       };
-      console.log(this.currentPosts)
       this.postsService.addPostAtBeginning(post);
-      console.log('submit', this.validateForm.value);
       this.showAlert = true;
       this.validateForm.reset();
       this.message.success('New post added successfully', { nzDuration: 3000 });
