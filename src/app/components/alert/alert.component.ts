@@ -13,10 +13,10 @@ export class AlertComponent {
   constructor(private postsService: PostsService) {}
 
   ngOnInit(): void {
-    this.lastestPost = this.postsService.getLastestPost();
   }
   
   showModal(): void {
+    this.lastestPost = this.postsService.getLastestPost();
     this.isVisible = true;
   }
 
