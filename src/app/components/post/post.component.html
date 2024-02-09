@@ -1,0 +1,13 @@
+<div nz-row nzGutter="16">
+    @for (item of posts; track $index) {
+        <nz-col nzXs="24" nzSm="12" nzMd="8" nzLg="6" nzXl="4">
+            <nz-card [nzTitle]="item.title" class="card nz-align-items-stretch">
+                <p><b>Post: {{ item.id }}</b></p>
+                <p>{{ item.body }}</p>
+            </nz-card>
+        </nz-col>
+    }
+</div>
+
+
+

@@ -1,0 +1,7 @@
+<button nz-button [nzType]="'primary'" (click)="showModal()"><span>Show Latest Post</span></button>
+<nz-modal [(nzVisible)]="isVisible" nzTitle="{{lastestPost?.title}}" (nzOnCancel)="handleCancel()" (nzOnOk)="handleOk()">
+  <ng-container *nzModalContent>
+    <p><b>Post: {{lastestPost?.id}}</b></p>
+    <p>{{lastestPost?.body}}</p>
+  </ng-container>
+</nz-modal>
