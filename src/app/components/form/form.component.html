@@ -10,7 +10,13 @@
             <nz-form-item>
               <nz-form-label [nzSpan]="24" nzFor="body" nzRequired>Body</nz-form-label>
               <nz-form-control [nzSpan]="24" nzErrorTip="Field required, Max length is 100">
-                <input type="text" nz-input formControlName="body" placeholder="Please input the body" />
+                <textarea
+                    nz-input
+                    placeholder="Autosize height with minimum and maximum number of lines"
+                    formControlName="body" 
+                    placeholder="Please input the body"
+                    [nzAutosize]="{ minRows: 1, maxRows: 6 }"
+                ></textarea>
               </nz-form-control>
             </nz-form-item>
             <nz-form-item>
